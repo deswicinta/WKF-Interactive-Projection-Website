@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
+    <title>WKF Group - Interactive Experiences</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/flaticon.png">
+</head>
+<body>
+
+    <img src="assets/sky.jpg" id="bg-fixed" alt="Background">
+
+    <!-- Page 1: Landing -->
+    <div id="page1" class="page visible">
+        <img src="assets/logo.png" class="logo" alt="WKF Floral Vaganza">
+        <button class="main-button" onclick="goToPage(2)">START</button>
+    </div>
+
+    <!-- Page 2: Design & Message -->
+    <div id="page2" class="page hidden">
+        <img src="assets/logo.png" class="logo-small" alt="WKF Floral Vaganza">
+        <div class="section-title">Pilih Bunga Favoritmu!:</div>
+
+        <div class="carousel-container">
+            <div class="arrow left" onclick="moveSlide(-1)">
+                <img src="assets/arrow_left.svg" alt="Previous">
+            </div>
+            <div class="carousel-window">
+                <div class="carousel-track" id="track"></div>
+            </div>
+            <div class="arrow right" onclick="moveSlide(1)">
+                <img src="assets/arrow_right.svg" alt="Next">
+            </div>
+        </div>
+
+        <div class="section-title">Masukkan Nama Anda!:</div>
+
+        <div class="input-area">
+            <textarea id="messageInput" maxlength="40" placeholder="Maksimal 40 karakter.."></textarea>
+            <div class="counter"><span id="charCount">0</span>/40</div>
+        </div>
+
+        <button class="main-button small-button" onclick="submitDesign()">SUBMIT</button>
+    </div>
+
+    <!-- Page 3: Confirmation -->
+    <div id="page3" class="page hidden">
+        <img src="assets/logo.png" class="logo-small" alt="Postcard From Afar">
+        <div class="section-title">Sudah siap?</div>
+
+        <div class="confirmation-container">
+            <img id="confirmImage" src="" alt="Selected">
+            <div id="confirmText" class="message-preview"></div>
+        </div>
+
+        <div class="button-row" style="margin-top: 20px;">
+            <button class="main-button small-button back-btn" onclick="goToPage(2)">BACK</button>
+            <button id="btnLaunch" class="main-button small-button" onclick="launchPostcard()">LAUNCH</button>
+        </div>
+    </div>
+
+    <!-- Page 4: Success -->
+    <div id="page4" class="page hidden">
+        <div class="success-content">
+            <div class="checkmark-circle">
+                <div class="checkmark">✓</div>
+            </div>
+            <h2 class="success-title">Berhasil!</h2>
+            <p class="success-desc">Namamu berhasil dikirim!</p>
+            <button class="main-button small-button" style="margin-top: 30px;" onclick="resetApp()">REPEAT</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

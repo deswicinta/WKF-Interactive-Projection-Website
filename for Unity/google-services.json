@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "764313028616",
+    "firebase_url": "https://wahana-flora-malang-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "wahana-flora-malang",
+    "storage_bucket": "wahana-flora-malang.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764313028616:android:0206545140f946016129bd",
+        "android_client_info": {
+          "package_name": "com.wahanaflora.projectionWKF"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJQIbmclsmjOJrepYGJO995eniBU2O5Us"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
